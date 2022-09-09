@@ -1,3 +1,7 @@
+body {
+  background: url('./assets/background.jpg');
+
+}
 .App {
   text-align: center;
 }
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 5vh;
+}
+
+.displayer {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.95);
+  margin-top: 10vh;
+  box-shadow: 1px 1px 10px #444;
+  border-radius: 10px;
 }
