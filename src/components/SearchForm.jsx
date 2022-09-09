@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 
 const SearchForm = () => {
     const [city, setCity] = useState('');
     const [country, setCountry] = useState('');
-    const [weather, setWeather] = useState('');
-    const [temp, setTemp] = useState('');
     const dispatch = useDispatch();
     const latitude = useSelector(state => state.zone.lat);
     const longitude = useSelector(state => state.zone.lon);
