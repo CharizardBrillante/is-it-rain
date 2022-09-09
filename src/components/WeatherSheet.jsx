@@ -25,17 +25,17 @@ const WeatherSheet = () => {
     let getWeatherIcon = () => {
         switch (main) {
             case "Rain":
-                return <div><BsCloudRainHeavy size={50}/><p>Rain</p></div>
+                return <div><BsCloudRainHeavy size={50}/><p>{main}</p></div>
             case "Clouds":
-                return <div><BsClouds size={50}/><p>Clouds</p></div>
+                return <div><BsClouds size={50}/><p>{main}</p></div>
             case "Snow":
-                return <div><BsCloudSnow size={50}/><p>Snow</p></div>
-            case "Sun":
-                return <div><BsSun size={50}/><p>Sun</p></div>
+                return <div><BsCloudSnow size={50}/><p>{main}</p></div>
+            case "Clear":
+                return <div><BsSun size={50}/><p>{main}</p></div>
             case "Fog":
-                return <div><BsCloudFog size={50}/><p>Fog</p></div>
+                return <div><BsCloudFog size={50}/><p>{main}</p></div>
             default:
-                return <div><BsCloudSun size={50}/><p>Partial Clouds</p></div>
+                return <div><BsCloudSun size={50}/><p>{main}</p></div>
         }
     }
 
