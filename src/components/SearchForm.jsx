@@ -10,7 +10,7 @@ const SearchForm = () => {
     const longitude = useSelector(state => state.zone.lon);
 
     let getWeather = () => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=e12fbfb0d2835c36bcf78ba622f4eb4c`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid={token}`)
         .then(res=>res.json())
         .then((res)=>{
             console.log(res);
@@ -43,7 +43,7 @@ const SearchForm = () => {
     }
 
     let getCoordinates = (cityName, countryCode) => {
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${countryCode}&limit=1&appid=e12fbfb0d2835c36bcf78ba622f4eb4c`)
+        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${countryCode}&limit=1&appid={token}`)
         .then((res)=>res.json())
         .then((res)=>{
             console.log(res[0].lat); 
